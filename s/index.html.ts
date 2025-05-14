@@ -49,9 +49,11 @@ export default template(async basic => {
 						<strong>Praxis</strong>
 						<small class=version>v${version}</small>
 					</h1>
+
 					<div class=text>
 						<p>Multiplayer webgame laboratory</p>
 					</div>
+
 					<div class=widget>
 						<button std-button=wide>Play Now</button>
 						<p>or <a href="https://github.com/benevolent-games/praxis#readme">learn more</a></p>

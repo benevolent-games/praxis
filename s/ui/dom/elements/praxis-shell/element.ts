@@ -1,0 +1,34 @@
+
+import {html, shadowComponent} from "@benev/slate"
+import styleCss from "./style.css.js"
+import themeCss from "../../theme.css.js"
+
+export const PraxisShell = shadowComponent(use => {
+	use.css(themeCss, styleCss)
+
+	const open = use.signal(false)
+	const toggle = () => open.value = !open.value
+	
+	return html`
+		<div class=frame>
+			<div class=menu ?x-open="${open.value}">
+				<div class=liner>
+					<div class=aspect>
+					</div>
+				</div>
+			</div>
+
+			<div class=content>
+				<div class=aspect>
+					<div class=buttonzone>
+						<button @click="${toggle}">
+							<img alt="B" src="/assets/benev.png"/>
+						</button>
+					</div>
+				</div>
+				<slot></slot>
+			</div>
+		</div>
+	`
+})
+

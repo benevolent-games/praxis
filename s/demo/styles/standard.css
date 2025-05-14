@@ -9,6 +9,10 @@
 		scrollbar-color: #333 transparent;
 
 		&:focus {
+			outline: none;
+		}
+
+		&:focus-visible {
 			outline: 0.2em dashed color-mix(in lch, var(--prime), #fff8 50%);
 		}
 	}
@@ -54,6 +58,7 @@
 			color: var(--prime);
 			border: 0.2em solid var(--prime);
 			background: color-mix(in lch, #0008, var(--prime) 20%);
+			box-shadow: 0 0 3em color-mix(in lch, transparent, var(--prime) 30%);
 
 			transition: all 68ms linear;
 
