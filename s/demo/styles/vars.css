@@ -1,0 +1,9 @@
+
+@layer vars {
+	:root {
+		--link: cyan;
+		--bg: #111;
+		--prime: #ebb935;
+	}
+}
+

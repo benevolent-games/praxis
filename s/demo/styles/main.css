@@ -1,0 +1,113 @@
+
+@layer vars, standard, main;
+
+@layer main {
+	:root {
+		color-scheme: dark;
+	}
+
+	html {
+		font-size: 16px;
+		height: 100%;
+
+		font-family: "Orbitron", sans-serif;
+		background: var(--bg);
+
+		background:
+			radial-gradient(circle, #0001, #000c),
+			var(--bg) url("https://i.imgur.com/dZL17sX.jpeg") center center / cover;
+
+		background:
+			radial-gradient(circle, #0006, #000c),
+			var(--bg) url("https://i.imgur.com/412c0B8.jpeg") center center / cover;
+	}
+
+	body {
+		height: 100%;
+	}
+
+	praxis-shell {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.plate {
+		font-size: 1.2em;
+		color: var(--prime);
+
+		overflow: auto;
+		width: 100%;
+		height: 100%;
+		padding: 1em;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+		gap: 2em;
+
+		&::before {
+			content: "";
+			flex: 1 1 auto;
+		}
+
+		&::after {
+			content: "";
+			flex: 2 1 auto;
+		}
+
+		h1 {
+			font-size: 1em;
+			font-weight: normal;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			> strong {
+				font-size: 4em;
+				text-align: center;
+				text-transform: uppercase;
+
+				color: color-mix(in lch, var(--prime), white 33%);
+				text-shadow:
+					0 0 0.5em var(--prime),
+					0 0 1em var(--prime),
+					0 0 2em var(--prime),
+					0 0 4em var(--prime);
+
+				letter-spacing: 0.4em;
+				&::after {
+					content: "";
+					margin-left: -0.4em;
+				}
+			}
+
+			> small {
+				opacity: 0.5;
+				margin-left: auto;
+				margin-right: 1em;
+			}
+		}
+
+		.widget {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 0.5em;
+
+			p { opacity: 0.5; }
+		}
+
+		.text {
+			opacity: 0.8;
+			text-transform: lowercase;
+			display: flex;
+			flex-direction: column;
+			gap: 0.5em;
+		}
+	}
+}
+

@@ -1,4 +1,4 @@
 
 # 🦾 ***PRAXIS***
-> *Multiplayer gameplay sandbox for the web*
+> *Multiplayer webgame laboratory*
 

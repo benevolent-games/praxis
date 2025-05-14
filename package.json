@@ -1,7 +1,7 @@
 {
 	"name": "@benev/praxis",
 	"version": "0.0.0-0",
-	"description": "Multiplayer gameplay sandbox for the web",
+	"description": "Multiplayer webgame laboratory",
 	"license": "MIT",
 	"type": "module",
 	"main": "./x/exports.web.js",
@@ -48,7 +48,9 @@
 		"game",
 		"gameplay",
 		"multiplayer",
+		"laboratory",
 		"sandbox",
+		"webgame",
 		"web game",
 		"open source"
 	],
