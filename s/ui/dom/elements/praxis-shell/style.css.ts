@@ -52,7 +52,7 @@ export default css`
 				color-mix(in lch, #0004, var(--offbeat) 5%),
 				color-mix(in lch, black, var(--offbeat) 1%)
 			),
-			var(--bg) url("https://i.imgur.com/dZL17sX.jpeg") center top / cover;
+			var(--bg) url("https://i.imgur.com/dZL17sX.jpeg") center center / cover;
 
 		border-bottom: 0.5em solid color-mix(in lch, transparent, var(--offbeat) 10%);
 		xxx-box-shadow: inset 0 5em 10em #0f04;

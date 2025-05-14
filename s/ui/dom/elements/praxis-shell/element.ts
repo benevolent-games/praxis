@@ -1,5 +1,5 @@
 
-import {html, shadowComponent} from "@benev/slate"
+import {ev, html, shadowComponent} from "@benev/slate"
 import styleCss from "./style.css.js"
 import themeCss from "../../theme.css.js"
 
@@ -8,6 +8,13 @@ export const PraxisShell = shadowComponent(use => {
 
 	const open = use.signal(false)
 	const toggle = () => open.value = !open.value
+
+	use.mount(() => ev(window, {
+		keydown: (event: KeyboardEvent) => {
+			if (event.code === "KeyB")
+				toggle()
+		},
+	}))
 	
 	return html`
 		<div class=frame>
