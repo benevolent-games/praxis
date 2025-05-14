@@ -16,9 +16,9 @@ export default css`
 		> button {
 			cursor: pointer;
 			flex: 1 1 auto;
-			font-size: 1.5em;
+			font-size: 1.2em;
 			text-align: center;
-			padding: 0.5em 1em;
+			padding: 0.5em;
 			color: #fff8;
 			border-bottom: 0.2em solid color-mix(in lch, transparent, var(--offbeat) 10%);
 			transition: border 300ms linear;

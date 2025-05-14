@@ -6,7 +6,7 @@ export default css`
 	display: block;
 	width: 100%;
 	height: 100%;
-	--mheight: min(24em, 90vh);
+	--mheight: min(24em, calc(100vh - 3em));
 }
 
 .frame {
@@ -52,7 +52,7 @@ export default css`
 		height: var(--mheight);
 		transition: var(--transition);
 
-		border-bottom: 0.3em solid color-mix(in lch, transparent, var(--offbeat) 10%);
+		border-bottom: 0.3em solid color-mix(in lch, transparent, var(--offbeat) 50%);
 		background:
 			radial-gradient(
 				circle,

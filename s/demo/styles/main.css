@@ -45,7 +45,7 @@
 		flex-direction: column;
 		justify-content: start;
 		align-items: center;
-		gap: 2em;
+		gap: min(2em, 5vh);
 
 		&::before {
 			content: "";
@@ -67,7 +67,7 @@
 
 			> strong {
 				font-size: 4em;
-				font-size: min(10vw, 4em);
+				font-size: min(4em, 10vw, 10vh);
 				text-align: center;
 				text-transform: uppercase;
 
@@ -104,9 +104,10 @@
 
 		.text {
 			opacity: 0.8;
-			text-transform: lowercase;
 			display: flex;
 			flex-direction: column;
+			text-transform: lowercase;
+			text-align: center;
 			gap: 0.5em;
 		}
 	}
