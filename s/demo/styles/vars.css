@@ -4,9 +4,11 @@
 		--link: cyan;
 		--bg: #111;
 		--prime: #ebb935;
-		--offbeat: #00bdff;
+		--offbeat: #ebb935;
 		--select-bg: #f60;
 		--select-color: #ff8;
+
+		--XXX-offbeat: #00bdff;
 	}
 }
 
