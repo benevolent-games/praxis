@@ -3,6 +3,7 @@ import {shadowView, html} from "@benev/slate"
 import styleCss from "./style.css.js"
 import themeCss from "../../../theme.css.js"
 import {Tab} from "./tab.js"
+import {AccountTab} from "./tabs/account/view.js"
 
 export const PraxisMenu = shadowView(use => () => {
 	use.name("menu")
@@ -11,38 +12,22 @@ export const PraxisMenu = shadowView(use => () => {
 	const activeIndex = use.signal(0)
 
 	const tabs = use.once(() => [
-		new Tab("👤", "Account", () => html`
-			<div>
-				<h2>Account</h2>
-				<div hidden>
-					<auth-user></auth-user>
-					<auth-button></auth-button>
-				</div>
-			</div>
-		`),
+		new Tab("👤", "Account", () => AccountTab([])),
 
 		new Tab("📡", "Multiplayer Lobby", () => html`
-			<div>
-				<h2>Multiplayer Lobby</h2>
-			</div>
+			<h2>Multiplayer Lobby</h2>
 		`),
 
 		new Tab("⚙️", "Settings", () => html`
-			<div>
-				<h2>Settings</h2>
-			</div>
+			<h2>Settings</h2>
 		`),
 
 		new Tab("🎮", "Controls", () => html`
-			<div>
-				<h2>Controls</h2>
-			</div>
+			<h2>Controls</h2>
 		`),
 
 		new Tab("🖥️", "Graphics", () => html`
-			<div>
-				<h2>Graphics</h2>
-			</div>
+			<h2>Graphics</h2>
 		`),
 	])
 
@@ -58,7 +43,9 @@ export const PraxisMenu = shadowView(use => () => {
 					</button>
 				`)}
 			</nav>
-			${tabs.at(activeIndex.value)?.render()}
+			<div class=tab>
+				${tabs.at(activeIndex.value)?.render()}
+			</div>
 		</div>
 	`
 })

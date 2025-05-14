@@ -5,8 +5,7 @@ import {PraxisShell} from "../ui/dom/elements/praxis-shell/element.js"
 
 register({PraxisShell})
 
-const auth = await install()
-auth.on(login => console.log("auth", login))
+await install()
 
 console.log("🦾 P R A X I S")
 

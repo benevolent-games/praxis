@@ -39,7 +39,7 @@ export default css`
 		}
 	}
 
-	> div {
+	> .tab {
 		flex: 1 1 auto;
 		overflow: auto;
 		padding: 1em 0;
@@ -47,11 +47,23 @@ export default css`
 
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: start;
 		align-items: center;
 
+		&::before {
+			content: "";
+			display: block;
+			flex: 1 1 auto;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			flex: 2 1 auto;
+		}
+
 		h2 {
-			color: #fff8;
+			color: #fff4;
 		}
 	}
 }
