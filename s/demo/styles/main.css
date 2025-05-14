@@ -67,6 +67,7 @@
 
 			> strong {
 				font-size: 4em;
+				font-size: min(10vw, 4em);
 				text-align: center;
 				text-transform: uppercase;
 

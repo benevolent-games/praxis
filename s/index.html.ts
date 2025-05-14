@@ -28,7 +28,7 @@ export default template(async basic => {
 			<meta data-version="${version}"/>
 
 			${renderSocialCard({
-				title: "Praxis",
+				title: "PRAXIS",
 				description: "Multiplayer webgame laboratory",
 				themeColor: "#ebb935",
 				siteName: domain,
