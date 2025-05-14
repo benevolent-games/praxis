@@ -16,7 +16,6 @@ export const PraxisShell = shadowComponent(use => {
 				toggle()
 		},
 	}))
-
 	
 	return html`
 		<div class=frame>

@@ -4,8 +4,9 @@ export default css`
 
 :host {
 	display: block;
-	width: 100%:
-	height: 100%:
+	width: 100%;
+	height: 100%;
+	--mheight: min(24em, 90vh);
 }
 
 .frame {
@@ -33,19 +34,25 @@ export default css`
 	overflow: hidden;
 	position: relative;
 	flex: 0 0 auto;
+	--transition: height 300ms ease;
 
-	height: 0%;
-	transition: height 300ms ease;
+	height: 0;
+	transition: var(--transition);
 
 	&[x-open] {
 		box-shadow: 0 1em 3em black;
-		height: min(24em, calc(100% - 5em));
+		height: var(--mheight);
 	}
 
 	.liner {
-		width: 100%;
-		height: 100%;
+		position: absolute;
+		bottom: 0;
 
+		width: 100%;
+		height: var(--mheight);
+		transition: var(--transition);
+
+		border-bottom: 0.3em solid color-mix(in lch, transparent, var(--offbeat) 10%);
 		background:
 			radial-gradient(
 				circle,
@@ -53,8 +60,6 @@ export default css`
 				color-mix(in lch, black, var(--offbeat) 1%)
 			),
 			var(--bg) url("https://i.imgur.com/dZL17sX.jpeg") center center / cover;
-
-		border-bottom: 0.3em solid color-mix(in lch, transparent, var(--offbeat) 10%);
 	}
 }
 
