@@ -1,14 +1,8 @@
 
-import {Content, ev, html, shadowComponent} from "@benev/slate"
+import {ev, html, shadowComponent} from "@benev/slate"
 import styleCss from "./style.css.js"
 import themeCss from "../../theme.css.js"
-
-class Tab {
-	constructor(
-		public label: string,
-		public render: () => Content = () => null,
-	) {}
-}
+import {PraxisMenu} from "./menu/view.js"
 
 export const PraxisShell = shadowComponent(use => {
 	use.css(themeCss, styleCss)
@@ -23,37 +17,13 @@ export const PraxisShell = shadowComponent(use => {
 		},
 	}))
 
-	const activeIndex = use.signal(0)
-	const tabs = use.once(() => [
-		new Tab("Account"),
-		new Tab("Settings"),
-		new Tab("Controls"),
-		new Tab("Rendering"),
-		new Tab("Friends"),
-	])
-
-	function renderMenu() {
-		return html`
-			<div class=menu>
-				<nav>
-					${tabs.map((tab, index) => html`
-						<button
-							?x-active="${activeIndex.value === index}"
-							@click="${() => activeIndex.value = index}">
-								${tab.label}
-						</button>
-					`)}
-				</nav>
-			</div>
-		`
-	}
 	
 	return html`
 		<div class=frame>
 			<div class=menubox ?x-open="${open.value}">
 				<div class=liner>
 					<div class=aspect>
-						${open.value ? renderMenu() : null}
+						${open.value ? PraxisMenu([]) : null}
 					</div>
 				</div>
 			</div>

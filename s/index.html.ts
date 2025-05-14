@@ -20,6 +20,8 @@ export default template(async basic => {
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 			<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech&display=swap" rel="stylesheet">
 
+			<link rel="stylesheet" href="https://authlocal.org/themes/basic.css"/>
+
 			<link rel="icon" href="${faviconVersioned}"/>
 			<style>${unsanitized(await read_file("x/demo/styles/vars.css"))}</style>
 			<style>${unsanitized(await read_file("x/demo/styles/standard.css"))}</style>

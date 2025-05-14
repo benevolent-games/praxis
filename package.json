@@ -16,6 +16,7 @@
 	},
 	"dependencies": {
 		"@benev/slate": "^0.3.3",
+		"@e280/authlocal": "^0.2.0-22",
 		"@e280/science": "^0.0.4",
 		"@e280/stz": "^0.0.0-18"
 	},
