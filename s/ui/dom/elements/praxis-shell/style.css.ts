@@ -29,7 +29,7 @@ export default css`
 	height: 100%;
 }
 
-.menu {
+.menubox {
 	overflow: hidden;
 	position: relative;
 	flex: 0 0 auto;
@@ -56,6 +56,36 @@ export default css`
 
 		border-bottom: 0.5em solid color-mix(in lch, transparent, var(--offbeat) 10%);
 		xxx-box-shadow: inset 0 5em 10em #0f04;
+	}
+
+	.menu {
+		nav {
+			background: color-mix(in lch, #000a, var(--offbeat) 10%);
+			display: flex;
+			flex-wrap: wrap;
+
+			button {
+				cursor: pointer;
+				padding: 1em;
+				color: #fff8;
+				border-bottom: 0.2em solid color-mix(in lch, transparent, var(--offbeat) 10%);
+				transition: all 200ms linear;
+
+				&:hover {
+					color: var(--offbeat);
+				}
+
+				&:active {
+					color: white;
+				}
+
+				&[x-active] {
+					color: var(--offbeat);
+					border-bottom: 0.2em solid var(--offbeat);
+					background: color-mix(in lch, transparent, var(--offbeat) 10%);
+				}
+			}
+		}
 	}
 }
 
