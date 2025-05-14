@@ -49,7 +49,7 @@ export default template(async basic => {
 				<section class=plate>
 					<h1>
 						<strong>Praxis</strong>
-						<small class=version>v${version}</small>
+						<small class=version>${version}</small>
 					</h1>
 
 					<div class=text>
