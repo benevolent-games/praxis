@@ -1,6 +1,6 @@
 {
 	"name": "@benev/praxis",
-	"version": "0.0.0-0",
+	"version": "0.0.0-1",
 	"description": "Multiplayer webgame laboratory",
 	"license": "MIT",
 	"type": "module",
