@@ -1,6 +1,7 @@
 
 import "@benev/slate/x/node.js"
 import {template, html, easypage, headScripts, git_commit_hash, read_file, read_json, unsanitized, renderSocialCard} from "@benev/turtle"
+import injectionsCss from "./demo/styles/injections.css.js"
 
 const domain = "praxis.benevolent.games"
 const favicon = "/assets/favicon.png"
@@ -18,9 +19,10 @@ export default template(async basic => {
 		head: html`
 			<link rel="preconnect" href="https://fonts.googleapis.com">
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-			<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
 			<link rel="icon" href="${faviconVersioned}"/>
+			<style>${unsanitized(injectionsCss)}</style>
 			<style>${unsanitized(await read_file("x/demo/styles/vars.css"))}</style>
 			<style>${unsanitized(await read_file("x/demo/styles/standard.css"))}</style>
 			<style>${unsanitized(await read_file("x/demo/styles/main.css"))}</style>

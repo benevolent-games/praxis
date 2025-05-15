@@ -59,7 +59,7 @@ export default css`
 				color-mix(in lch, #0004, var(--offbeat) 5%),
 				color-mix(in lch, black, var(--offbeat) 1%)
 			),
-			var(--bg) url("https://i.imgur.com/dZL17sX.jpeg") center center / cover;
+			var(--bg) var(--resources-images-plates) center center / cover;
 	}
 }
 
@@ -75,7 +75,7 @@ export default css`
 		}
 	}
 
-	slot {
+	[view="loader"] {
 		overflow: auto;
 		height: 100%;
 	}
