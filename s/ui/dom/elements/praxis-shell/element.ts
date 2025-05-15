@@ -3,6 +3,8 @@ import {ev, html, shadowComponent} from "@benev/slate"
 import styleCss from "./style.css.js"
 import themeCss from "../../theme.css.js"
 import {PraxisMenu} from "./menu/view.js"
+import {brain} from "../../../logic/brain.js"
+import {LoaderView} from "../../views/loader/view.js"
 
 export const PraxisShell = shadowComponent(use => {
 	use.css(themeCss, styleCss)
@@ -35,7 +37,10 @@ export const PraxisShell = shadowComponent(use => {
 						</button>
 					</div>
 				</div>
-				<slot></slot>
+
+				${LoaderView([brain.loader], {
+					content: html`<slot></slot>`,
+				})}
 			</div>
 		</div>
 	`

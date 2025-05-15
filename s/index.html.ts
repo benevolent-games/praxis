@@ -55,7 +55,7 @@ export default template(async basic => {
 					</div>
 
 					<div class=widget>
-						<button std-button=wide>Play Now</button>
+						<praxis-play></praxis-play>
 						<p>or <a href="https://github.com/benevolent-games/praxis#readme">learn more</a></p>
 					</div>
 				</section>

@@ -44,40 +44,4 @@
 			color: color-mix(in srgb, white, var(--link) 50%);
 		}
 	}
-
-	button {
-		all: unset;
-
-		&[std-button] {
-			cursor: pointer;
-			user-select: none;
-			font-weight: bold;
-			text-transform: uppercase;
-
-			padding: 0.5em;
-			color: var(--prime);
-			border: 0.2em solid var(--prime);
-			background: color-mix(in lch, #0008, var(--prime) 20%);
-			box-shadow: 0 0 3em color-mix(in lch, transparent, var(--prime) 30%);
-
-			transition: all 68ms linear;
-
-			&:hover {
-				color: color-mix(in lch, var(--prime), white 50%);
-				border-color: color-mix(in lch, var(--prime), white 50%);
-				background: color-mix(in lch, transparent, var(--prime) 50%);
-				box-shadow: 0 0 3em color-mix(in lch, transparent, var(--prime) 50%);
-			}
-
-			&:active {
-				color: color-mix(in lch, var(--prime), black 50%);
-				border-color: color-mix(in lch, var(--prime), black 50%);
-				background: color-mix(in lch, var(--prime), white 50%);
-			}
-
-			&[std-button="wide"] {
-				padding: 0.5em 2em;
-			}
-		}
-	}
 }
