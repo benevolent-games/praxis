@@ -31,6 +31,10 @@ export default css`
 		opacity: 1;
 	}
 
+	&[x-stage="fade-out"] {
+		pointer-events: none;
+	}
+
 	.benev {
 		width: 10em;
 		height: 10em;
