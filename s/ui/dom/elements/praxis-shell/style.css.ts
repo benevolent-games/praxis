@@ -76,13 +76,15 @@ export default css`
 	}
 
 	[view="loader"] {
+		position: absolute;
+		inset: 0;
 		overflow: auto;
-		height: 100%;
 	}
 }
 
 .buttonzone {
 	position: absolute;
+	z-index: 2;
 	left: 1em;
 
 	button {

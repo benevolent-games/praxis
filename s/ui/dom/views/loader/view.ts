@@ -9,19 +9,39 @@ export const LoaderView = shadowView(use => (loader: Loader) => {
 	use.name("loader")
 	use.css(themeCss, styleCss)
 
+	const stage = loader.stage.value
 	const tasks = loader.operation.value
 
-	function renderLoadScreen(tasks: Set<Task>) {
+	function renderLoadScreen(tasks: Set<Task>, visible: boolean) {
+		const count = 2
 		return html`
-			<div class=loadscreen>
+			<div class=loadscreen ?x-visible="${visible}">
 				<img class=benev alt="" src="/assets/benev.png"/>
-				<p>loading ${tasks.size}</p>
+
+				<div class=report ?x-none="${tasks.size === 0}">
+					${[...tasks].slice(0, count).map(task => html`
+						<p>${task.label}...</p>
+					`)}
+					${tasks.size > count
+						? html`<p>...and ${tasks.size - count} more tasks</p>`
+						: null}
+				</div>
 			</div>
 		`
 	}
 
-	return tasks
-		? renderLoadScreen(tasks)
-		: loader.render()
+	const loadScreenEnabled = stage >= 1
+	const loadScreenVisible = stage >= 2
+	const shouldRenderContent = stage <= 2
+
+	return html`
+		${loadScreenEnabled && tasks
+			? renderLoadScreen(tasks, loadScreenVisible)
+			: null}
+
+		${shouldRenderContent
+			? loader.render()
+			: null}
+	`
 })
 
