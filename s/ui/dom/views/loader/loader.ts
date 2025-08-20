@@ -1,6 +1,7 @@
 
 import {nap} from "@e280/stz"
-import {Content, signal} from "@benev/slate"
+import {Content} from "@e280/sly"
+import {signal} from "@e280/strata"
 
 import {Task} from "./parts/task.js"
 import {LoadingOperation} from "./parts/operation.js"

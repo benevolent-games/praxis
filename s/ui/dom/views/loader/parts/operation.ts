@@ -1,5 +1,5 @@
 
-import {Content} from "@benev/slate"
+import {Content} from "@e280/sly"
 import {Task} from "./task.js"
 
 export class LoadingOperation {

@@ -1,14 +1,13 @@
 
-import {shadowView, html} from "@benev/slate"
-
+import {html} from "lit"
+import {view} from "@e280/sly"
 import styleCss from "./style.css.js"
 import themeCss from "../../theme.css.js"
-
 import {Loader} from "./loader.js"
 import {SpinnerView} from "../spinner/view.js"
 import {LoadingOperation} from "./parts/operation.js"
 
-export const LoaderView = shadowView(use => (loader: Loader) => {
+export const LoaderView = view(use => (loader: Loader) => {
 	use.name("loader")
 	use.css(themeCss, styleCss)
 
@@ -32,7 +31,7 @@ export const LoaderView = shadowView(use => (loader: Loader) => {
 					${focustasks.map(task => html`
 						<li x-id="${task.id}">
 							<div class=label>
-								${SpinnerView([])}
+								${SpinnerView()}
 								${task.label}...
 							</div>
 							${task.progress ?html`
@@ -46,7 +45,7 @@ export const LoaderView = shadowView(use => (loader: Loader) => {
 					${tasks.size > count ? html`
 						<li>
 							<div class=label>
-								${SpinnerView([])}
+								${SpinnerView()}
 								...and ${remaining} more ${remaining === 1 ?"task" :"tasks"}...
 							</div>
 						</li>

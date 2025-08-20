@@ -1,6 +1,6 @@
 
-import {loop} from "@e280/stz"
-import {html, nap} from "@benev/slate"
+import {html} from "lit"
+import {loop, nap} from "@e280/stz"
 
 import {Loader} from "../dom/views/loader/loader.js"
 import {Task} from "../dom/views/loader/parts/task.js"

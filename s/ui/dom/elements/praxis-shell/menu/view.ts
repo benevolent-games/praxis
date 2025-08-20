@@ -1,18 +1,19 @@
 
-import {shadowView, html} from "@benev/slate"
+import {html} from "lit"
+import {view} from "@e280/sly"
 import styleCss from "./style.css.js"
 import themeCss from "../../../theme.css.js"
 import {Tab} from "./tab.js"
 import {AccountTab} from "./tabs/account/view.js"
 
-export const PraxisMenu = shadowView(use => () => {
+export const PraxisMenu = view(use => () => {
 	use.name("menu")
 	use.css(themeCss, styleCss)
 	
 	const activeIndex = use.signal(0)
 
 	const tabs = use.once(() => [
-		new Tab("👤", "Account", () => AccountTab([])),
+		new Tab("👤", "Account", () => AccountTab()),
 
 		new Tab("📡", "Multiplayer Lobby", () => html`
 			<h2>Multiplayer Lobby</h2>

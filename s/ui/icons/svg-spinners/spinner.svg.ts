@@ -1,7 +1,8 @@
 
-import {svg} from "@benev/slate"
+import {svg} from "lit"
 
 // from https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/90-ring-with-bg.svg
+// mit licensed
 //
 // adjusted by chase moskal
 //  - added `*{fill:currentColor}`

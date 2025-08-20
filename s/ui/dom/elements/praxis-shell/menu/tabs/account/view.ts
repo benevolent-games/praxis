@@ -1,9 +1,10 @@
 
-import {html, shadowView} from "@benev/slate"
+import {html} from "lit"
+import {view} from "@e280/sly"
 import styleCss from "./style.css.js"
 import themeCss from "../../../../../theme.css.js"
 
-export const AccountTab = shadowView(use => () => {
+export const AccountTab = view(use => () => {
 	use.name("account")
 	use.css(themeCss, styleCss)
 	

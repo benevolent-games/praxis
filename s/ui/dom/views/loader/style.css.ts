@@ -1,5 +1,5 @@
 
-import {css, unsafeCSS} from "@benev/slate"
+import {css, unsafeCSS} from "lit"
 import {Loader} from "./loader.js"
 import {resources} from "../../../logic/resources.js"
 export default css`
